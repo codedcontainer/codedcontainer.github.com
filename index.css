@@ -1,0 +1,322 @@
+
+html{
+    height: 100%;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: .025em;
+    line-height: 1.4em;
+    margin: 0;
+    height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: FranklinGothicHeavy;
+    margin: 0;
+    line-height: 1.2em;
+}
+
+#coded-container {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto 1fr auto;
+    min-height: 100%;
+}
+
+header {
+    padding: 2em 2em;
+    grid-column: 1/13;
+    grid-row: 1;
+    display: grid;
+}
+.header__inverse{
+    background-color: #00255f;
+    color: white;
+    padding-bottom: 2.7em;
+}
+
+header #logo {
+    margin-top: auto;
+    margin-bottom: auto;
+    grid-column: 1/2;
+}
+
+header #logo img {
+    height: 1.75em;
+    width: auto;
+    display: block;
+}
+
+header nav {
+    margin-top: auto;
+    margin-bottom: auto;
+    grid-column: 12;
+}
+
+header nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+header nav ul li {
+    font-weight: bold;
+}
+
+#hero {
+    background-color: #00255f;
+    background-image: url(/img/desk-top-gradient.png);
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-blend-mode: exclusion;
+    color: white;
+    padding: 3% 0 7% 0;
+    display: grid;
+    grid-column: 1/13;
+}
+
+#hero #hero-left {
+    grid-column: 4/5;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#hero #hero-left #job-title {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0 0 1.5em 0;
+    font-weight: lighter;
+}
+
+#hero #hero-right {
+    grid-column: 6/10;
+}
+
+#hero #hero-right p {
+    width: 670px;
+}
+
+#hero #hero-right p::before {
+    content: "<";
+    position: absolute;
+    font-size: 200px;
+    float: left;
+    margin-left: -.7em;
+    margin-top: .29em;
+    color: #ffffff0a;
+}
+
+#hero #hero-right p::after {
+    content: "\\>";
+    font-size: 200px;
+    position: absolute;
+    color: #ffffff0a;
+    margin-top: -.29em;
+    margin-left: 2em;
+}
+
+
+#highlights {
+    background-color: #dedede;
+    border-radius: .75em;
+    display: flex;
+    flex-direction: row;
+    margin-top: -4em;
+    height: 7em;
+    color: #00255f;
+    grid-column: 2/12;
+}
+
+#highlights .hightlight {
+    flex: auto;
+    margin: auto;
+    max-width: 15em;
+    text-align: center;
+    flex-grow: 1;
+    padding: 1em;
+}
+
+.hightlight-value {
+    font-size: 40px;
+}
+
+.highlight-text {
+    font-family: Franklin Gothic Heavy;
+    font-weight: bold;
+}
+
+section#specialties {
+    grid-column: 1/13;
+    display: flex;
+    margin: 0;
+}
+
+section#specialties .specialty-card {
+    flex: auto;
+    padding: 2em;
+}
+
+.specialty-card__header {
+    display: flex;
+    align-items: center;
+}
+
+.specialty-card .icon-40 {
+    height: 40px;
+    width: auto;
+    display: inline;
+}
+
+.specialty-card h4 {
+    display: inline;
+    padding: 0 .5em;
+}
+a button{
+cursor: pointer;
+}
+button.btn-blue {
+    background-color: #00255f;
+}
+
+button.btn-green {
+    background-color: #15613e;
+    margin-right: 15px;
+}
+
+button.btn-blue,
+button.btn-green {
+    border-radius: .5em;
+    border: 0;
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.align-right {
+    text-align: right;
+    float: inline-end;
+}
+
+section#projects {
+    grid-column: 1/13;
+    display: flex;
+    background-color: #737373;
+    background-image: url('img/brick-greyscale.jpg');
+    background-blend-mode: exclusion;
+    background-size: cover;
+    padding: 4em 1em;
+}
+
+section#projects .project-card {
+    display: grid;
+    margin: 1em;
+    background-color: white;
+    border-radius: 20px;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto;
+}
+
+.project-card .project-card-icons {
+    background-color: #00255f;
+    width: auto;
+    grid-column: 1;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.project-card-icons img {
+    height: 50px;
+    width: 50px;
+    align-items: stretch;
+    margin: auto;
+}
+
+.project-card .project-card-content {
+    grid-column: 2/6;
+    padding: 1.5em;
+}
+
+.pokeball-repeat {
+    background: url('/img/pokeball-outline-30.png');
+}
+
+.tag-repeat {
+    background: url('/img/tag-outline-30.png');
+}
+
+.tag-repeat,
+.pokeball-repeat {
+    background-size: 30px;
+    background-blend-mode: soft-light;
+    background-position-y: 1.25em;
+}
+
+/* ========== SKILLS ========== */
+section#skills {
+    grid-column: 1/13;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 2em;
+    margin: 2em 2em;
+}
+
+
+/* ========== PAGE/ARTILE ========== */
+article{
+    grid-column: 3/11;
+    margin: 4em;
+}
+
+article .meta{
+    padding-top: 1em;
+    font-family: FranklinGothicHeavy;
+}
+
+
+/* ========== FOOTER ========== */
+footer {
+    grid-column: 1/13;
+    display: grid;
+    background-color: #00255f;
+    padding: 2.5em;
+    color: white;
+}
+
+footer #footer__social-media {
+    grid-column: 11/13;
+    text-align: right;
+}
+
+#footer__social-media a {
+    padding: 0 .25em;
+}
+
+#footer__social-media a img {
+    height: 30px;
+}
+
+#copyright {
+    margin-top: auto;
+    margin-bottom: auto;
+    grid-column: 1/2;
+}
+
+#copyright::before {
+    content: '©';
+}
+
+@font-face {
+    font-family: FranklinGothicHeavy;
+    src: url(fonts/FranklinGothicStd-Hvy.ttf);
+}

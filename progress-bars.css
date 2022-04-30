@@ -1,0 +1,58 @@
+.progress-bar {
+    margin: .5em 0;
+}
+
+.progress-bar__title,
+.progress-bar__years-experience {
+    color: #00255f;
+}
+
+.progress-bar__title {
+    font-family: FranklinGothicHeavy;
+}
+
+.progress-bar__years-experience {
+    font-family: Arial;
+}
+
+.progress-bar__background {
+    background: #dedede;
+    height: 20px;
+    width: 100%;
+    border-radius: 2em;
+}
+
+.progress-bar__low,
+.progress-bar__low-medium,
+.progress-bar__medium,
+.progress-bar__medium-high,
+.progress-bar__high {
+    height: 20px;
+    border-radius: 2em;
+    background: #00255f;
+}
+
+.progress-bar__low {
+    width: 10%;
+}
+
+.progress-bar__low-medium {
+    width: 25%;
+}
+
+.progress-bar__medium {
+    width: 50%;
+}
+
+.progress-bar__medium-high {
+    width: 75%;
+}
+
+.progress-bar__high {
+    width: 90%;
+}
+
+@font-face {
+    font-family: FranklinGothicHeavy;
+    src: url(fonts/FranklinGothicStd-Hvy.ttf);
+}
