@@ -6,14 +6,14 @@ var window_size = 0;
 
 window.addEventListener('scroll', function(){
     setScrollHeights();
+    var scroll_marker = 0; 
     if(scroll_from_top >= projects_offset_top - window_height &&
 	scroll_from_top <= projects_offset_bottom){
-	//add parallax animation logic here
-	console.log('page scroll in area');
+	var bkg_offset = scroll_from_top - projects_offset_top * -1;
+	document.getElementById('projects').style['background-position-y'] = bkg_offset + "px"; 
 }
     else{
-	console.log('page scroll not in area');
-	//set background top to 0
+	document.getElementById('projects').style['background-position-y'] = "0px";
     }
 }); 
 window.addEventListener('resize', function(){
