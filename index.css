@@ -11,6 +11,10 @@ body {
     height: 100%;
 }
 
+a:link, a:visited, a:hover, a:active {
+    link-decoration: none;
+}
+
 h1,
 h2,
 h3,
