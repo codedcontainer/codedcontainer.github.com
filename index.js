@@ -4,6 +4,9 @@ window_size, window_height;
 
 setScrollHeight(); 
 setLengthsOnResize();
+document.getElementsByClassName('current-year')[0].innerHTML= currentYear();
+
+
 
 window.addEventListener('scroll', function(){
     setScrollHeight();
@@ -35,4 +38,7 @@ function setLengthsOnResize(){
 }
 function scrollToTop(){
 	document.getElementByTagName('html')[0].scroll(0,0); 
+}
+function currentYear(){
+	return new Date().getFullYear();
 }
