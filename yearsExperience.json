@@ -1,23 +1,32 @@
 {
-	"totalExperience":2012,
-	"htmlCSS": [], 
-	"jquery": [], 
-	"vanillaJavascript": [],
-	"mySql": [], 
-	"nodeJs": [], 
-	"bootstrap": [],
-	"c#": [],
-	"msSql": [],
-	"php": [],
-	"entityFramework": [],
-	"googleMapsGeolocation": [],
-	"graphicDesign": [], 
-	"mernStack":[],
-	"scrumAgile": [],
-	"uiUx":[],
-	"wordPress":[],
-	"webServicesApis":[],
-	"python":[],
-	"htmlEmailTemplates":[],
-	"seo":[]
-}
+	"totalProfExperience":"2012-",
+	"frontEnd": {
+		"htmlCSS": "2007-", 
+		"jquery": "2011-", 
+		"googleMapsGeolocation": [2014,2015,2022],
+		"htmlEmailTemplates":[2014],
+		"uiUx":[2013,2014],		
+		"bootstrap": ["2014-2019"],
+		"vanillaJavascript": [2008,"2011-"]
+	},
+	"backEnd":{
+	"webServicesApis":[2015,2016,"2019-2021"],
+		"openSource": {
+			"wordPress":["2012-2015"],
+			"mySql": ["2012-2015"], 
+			"nodeJs": ["2020-2022"], 
+			"python":[2021,2022],
+			"php": ["2012-2015"]
+		},
+		"microsoft":{
+			"cSharp": "2018-",
+			"msSql": "2018-",
+			"entityFramework": "2019-"
+		}
+	},
+	"other":{
+		"graphicDesign": [2009,"2010-2019",2022],
+		"mernStack":[2018,2020],
+		"seo":["2013-2015"],
+		"scrumAgile": [2013]
+	}}
