@@ -16,62 +16,54 @@ window.addEventListener('scroll', function () {
 	else {
 		document.getElementById('projects').style['background-position-y'] = "0px";
 	}
-	if(scroll_from_top >= skills_offset_top - window_height){
-	   //only call once, check if the class exists and if not add it
-	   var lowPro = document.getElementsByClassName('progress-bar__low-animate')[0];
-	   var lowMediumPro = document.getElementsByClassName('progress-bar__low-medium-animate')[0];
-	   var mediumPro = document.getElementsByClassName('progress-bar__medium-animate')[0];
-	   var mediumHighPro = document.getElementsByClassName('progress-bar__medium-high-animate')[0];
-	   var highPro= document.getElementsByClassName('progress-bar__high-animate')[0];
-	
-	    if(lowPro == undefined){
-		var lowProgressBars = document.getElementsByClassName('progress-bar__low'); 
-		for(var a = 0; a <= lowProgressBars.length -1; a++){
-		    lowProgressBars[a].className = 'progress-bar__low progress-bar__low-animate';
-		}
-	    }
-	    if(lowMediumPro == undefined){
-		var lowMediumProgressBars =
-		document.getElementsByClassName('progress-bar__low-medium'); 
-		for(var a = 0; a <= lowMediumProgressBars.length -1; a ++){
-		    lowMediumProgressBars[a].className = 'progress-bar__low-medium progress-bar__low-medium-animate';
-		}
-	    }
-	    if(mediumPro == undefined){
-		var mediumProgressBars = document.getElementsByClassName('progress-bar__medium');
-		for(var a = 0; a<= mediumProgressBars.length -1; a++){
-		    mediumProgressBars[a].className = 'progress-bar__medium progress-bar__medium-animate';
-		}
-	    }
-	    
-	    if(mediumHighPro== undefined){
-		var mediumHighProgressBars =
-		document.getElementsByClassName('progress-bar__medium-high');
-		for(var a = 0; a<= mediumHighProgressBars.length -1; a++){
-		    mediumHighProgressBars[a].className = 'progress-bar__medium-high progress-bar__medium-high-animate';
-		}
-	    }
-	    if(highPro == undefined){
-		var highProgressBars = document.getElementsByClassName('progress-bar__high');
-		for(var a = 0; a<= highProgressBars.length -1; a++){
-		    highProgressBars[a].className = 'progress-bar__high progress-bar__high-animate';
-		}
-	    }
-	}
-	else{
-	    var low = document.getElementsByClassName('progress-bar__low-animate');
-	    while(low.length > 0){
-		low[0].className = 'progress-bar__low';
-	    }
-	    var lowMedium = document.getElementsByClassName('progress-bar__low-medium-animate');
-	    while (lowMedium.length > 0){lowMedium[0].className = 'progress-bar__low-medium';} 
-	    var medium = document.getElementsByClassName('progress-bar__medium-animate');
-	    while(medium.length > 0){ medium[0].className = 'progress-bar__medium'; }
-	    var mediumHigh = document.getElementsByClassName('progress-bar__medium-high-animate');
-	    while(mediumHigh.length > 0){ mediumHigh[0].className = 'progress-bar__medium-high';} 
-	    var high = document.getElementsByClassName('progress-bar__high-animate');
-	    while(high.length > 0) { high[0].className = 'progress-bar__high';} 
 
+	var lowPro = document.getElementsByClassName('progress-bar__low-animate');
+	var lowMediumPro = document.getElementsByClassName('progress-bar__low-medium-animate')
+	var mediumPro = document.getElementsByClassName('progress-bar__medium-animate');
+	var mediumHighPro = document.getElementsByClassName('progress-bar__medium-high-animate');
+	var highPro = document.getElementsByClassName('progress-bar__high-animate');
+
+	if (scroll_from_top >= skills_offset_top - window_height) {
+		if (lowPro[0] == undefined) {
+			var lowProgressBars = document.getElementsByClassName('progress-bar__low');
+			for (var a = 0; a <= lowProgressBars.length - 1; a++) {
+				lowProgressBars[a].className = 'progress-bar__low progress-bar__low-animate';
+			}
+		}
+		if (lowMediumPro[0] == undefined) {
+			var lowMediumProgressBars =
+				document.getElementsByClassName('progress-bar__low-medium');
+			for (var a = 0; a <= lowMediumProgressBars.length - 1; a++) {
+				lowMediumProgressBars[a].className = 'progress-bar__low-medium progress-bar__low-medium-animate';
+			}
+		}
+		if (mediumPro[0] == undefined) {
+			var mediumProgressBars = document.getElementsByClassName('progress-bar__medium');
+			for (var a = 0; a <= mediumProgressBars.length - 1; a++) {
+				mediumProgressBars[a].className = 'progress-bar__medium progress-bar__medium-animate';
+			}
+		}
+
+		if (mediumHighPro[0] == undefined) {
+			var mediumHighProgressBars =
+				document.getElementsByClassName('progress-bar__medium-high');
+			for (var a = 0; a <= mediumHighProgressBars.length - 1; a++) {
+				mediumHighProgressBars[a].className = 'progress-bar__medium-high progress-bar__medium-high-animate';
+			}
+		}
+		if (highPro[0] == undefined) {
+			var highProgressBars = document.getElementsByClassName('progress-bar__high');
+			for (var a = 0; a <= highProgressBars.length - 1; a++) {
+				highProgressBars[a].className = 'progress-bar__high progress-bar__high-animate';
+			}
+		}
+	}
+	else {
+		while (lowPro.length > 0) { lowPro[0].className = 'progress-bar__low'; }
+		while (lowMediumPro.length > 0) { lowMediumPro[0].className = 'progress-bar__low-medium'; }
+		while (mediumPro.length > 0) { mediumPro[0].className = 'progress-bar__medium'; }
+		while (mediumHighPro.length > 0) { mediumHighPro[0].className = 'progress-bar__medium-high'; }
+		while (highPro.length > 0) { highPro[0].className = 'progress-bar__high'; }
 	}
 });
 window.addEventListener('resize', function () {
@@ -84,9 +76,9 @@ function setLengthsOnResize() {
 	projects_offset_top = document.getElementById('projects').offsetTop;
 	projects_div_height = document.getElementById('projects').clientHeight;
 	projects_offset_bottom = projects_offset_top + projects_div_height;
-	skills_offset_top = document.getElementById('skills').offsetTop; 
-	skills_div_height = document.getElementById('skills').clientHeight; 
-	skills_offset_bottom = skills_offset_top + skills_div_height; 
+	skills_offset_top = document.getElementById('skills').offsetTop;
+	skills_div_height = document.getElementById('skills').clientHeight;
+	skills_offset_bottom = skills_offset_top + skills_div_height;
 	window_height = window.innerHeight;
 }
 function scrollToTop() {
@@ -174,21 +166,21 @@ yearsExperienceJson(function (jsonResponse) {
 	destination.innerHTML = html;
 });
 function progressBarLength(number, m, progressLength) {
-		if( number >= 1 && number <= 3){
-			m = m.replace(progressLength, '<div class="progress-bar__low"></div>');
-			}
-		if( number >= 4 && number <= 5){
-			m = m.replace(progressLength, '<div class="progress-bar__low-medium"></div>');
-			}
-		if( number >= 6 && number <= 7){
-			m = m.replace(progressLength, '<div class="progress-bar__medium"></div>');
-			}
-		if( number >= 8 && number <= 9){
-			m = m.replace(progressLength, '<div class="progress-bar__medium-high"></div>');
-			}
-		if( number >= 10){
-			m = m.replace(progressLength, '<div class="progress-bar__high"></div>');
-			}
-	
+	if (number >= 1 && number <= 3) {
+		m = m.replace(progressLength, '<div class="progress-bar__low"></div>');
+	}
+	if (number >= 4 && number <= 5) {
+		m = m.replace(progressLength, '<div class="progress-bar__low-medium"></div>');
+	}
+	if (number >= 6 && number <= 7) {
+		m = m.replace(progressLength, '<div class="progress-bar__medium"></div>');
+	}
+	if (number >= 8 && number <= 9) {
+		m = m.replace(progressLength, '<div class="progress-bar__medium-high"></div>');
+	}
+	if (number >= 10) {
+		m = m.replace(progressLength, '<div class="progress-bar__high"></div>');
+	}
+
 	return m;
 }
