@@ -28,23 +28,32 @@
 }
 .progress-bar__low {
     width: 10%;
-    animation: bar-low__width 2s cubic-bezier(.65,.05,.36,1); 
 }
 .progress-bar__low-medium {
     width: 25%;
-    animation: bar-low-medium__width 2s cubic-bezier(.65,.05,.36,1); 
-    
 }
 .progress-bar__medium {
     width: 50%;
-    animation: bar-medium__width 2s cubic-bezier(.65,.05,.36,1); 
 }
 .progress-bar__medium-high {
     width: 75%;
-    animation: bar-medium-high__width 2s cubic-bezier(.65,.05,.36,1); 
 }
 .progress-bar__high {
     width: 90%;
+}
+.progress-bar__low-animate{
+    animation: bar-low__width 2s cubic-bezier(.65,.05,.36,1); 
+}
+.progress-bar__low-medium-animate{
+    animation: bar-low-medium__width 2s cubic-bezier(.65,.05,.36,1); 
+}
+.progress-bar__medium-animate{
+    animation: bar-medium__width 2s cubic-bezier(.65,.05,.36,1); 
+}
+.progress-bar__medium-high-animate{
+    animation: bar-medium-high__width 2s cubic-bezier(.65,.05,.36,1); 
+}
+.progress-bar__high-animate{
     animation: bar-high__width 2s cubic-bezier(.65,.05,.36,1); 
 }
 @font-face {
