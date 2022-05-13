@@ -34,25 +34,48 @@
 
 .progress-bar__low {
     width: 10%;
+    animation: bar-low__width 2s cubic-bezier(.65,.05,.36,1); 
 }
-
 .progress-bar__low-medium {
     width: 25%;
+    animation: bar-low-medium__width 2s cubic-bezier(.65,.05,.36,1); 
+    
 }
-
 .progress-bar__medium {
     width: 50%;
+    animation: bar-medium__width 2s cubic-bezier(.65,.05,.36,1); 
 }
 
 .progress-bar__medium-high {
     width: 75%;
+    animation: bar-medium-high__width 2s cubic-bezier(.65,.05,.36,1); 
 }
-
 .progress-bar__high {
     width: 90%;
+    animation: bar-high__width 2s cubic-bezier(.65,.05,.36,1); 
 }
-
 @font-face {
     font-family: FranklinGothicHeavy;
     src: url(fonts/FranklinGothicStd-Hvy.ttf);
 }
+@keyframes bar-low__width{
+    from {width: 0%; }
+    to {width: 10%}
+}
+@keyframes bar-low-medium__width{
+    from {width: 0%;}
+    to {width: 25%; }
+}
+@keyframes bar-medium__width{
+    from{width: 0%}
+    to {width: 50% }
+}
+@keyframes bar-medium-high__width{
+    from {width: 0%}
+    to {width: 75%;}
+}
+@keyframes bar-high__width{
+    from {width: 0%}
+    to{width: 90%}
+}
+
